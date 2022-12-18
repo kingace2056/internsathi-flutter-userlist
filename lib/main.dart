@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:userlist_internsathi/views/homepage.dart';
 
 void main() {
@@ -15,9 +16,10 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          useMaterial3: true,
-          primarySwatch: Colors.blue,
-        ),
+            useMaterial3: true,
+            primarySwatch: Colors.blue,
+            textTheme:
+                GoogleFonts.overpassTextTheme(Theme.of(context).textTheme)),
         home: const HomePage());
   }
 }

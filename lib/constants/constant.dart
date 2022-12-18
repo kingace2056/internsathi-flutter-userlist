@@ -9,3 +9,6 @@ Color secondaryColor = const Color(0xFFFFFFFF);
 // internsathi logo constant
 String logo =
     'https://internsathi.com/wp-content/uploads/2022/06/InternSathi-logo.png';
+
+// api url
+String apiUrl = 'https://jsonplaceholder.typicode.com/users';
