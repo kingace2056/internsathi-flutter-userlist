@@ -26,106 +26,104 @@ class showAlert extends StatelessWidget {
           )
         ],
       ),
-      content: Expanded(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.phone,
-                  color: primaryColor,
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Text(userModel.phone.toString())
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.location_on_outlined,
-                  color: primaryColor,
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Text(userModel.email.toString())
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.location_city,
-                  color: primaryColor,
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Expanded(
-                  child: Text(
-                    '${userModel.address!.street}, ${userModel.address!.suite}, ${userModel.address!.city}',
-                    maxLines: 2,
-                  ),
-                )
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.location_on_outlined,
-                  color: primaryColor,
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Flexible(
-                    child: Text(
-                  '${userModel.address!.geo.lat} , ${userModel.address!.geo.lat}',
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.phone,
+                color: primaryColor,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Text(userModel.phone.toString())
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.location_on_outlined,
+                color: primaryColor,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Text(userModel.email.toString())
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.location_city,
+                color: primaryColor,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Expanded(
+                child: Text(
+                  '${userModel.address!.street}, ${userModel.address!.suite}, ${userModel.address!.city}',
                   maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ))
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0),
-              child: Center(
+                ),
+              )
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.location_on_outlined,
+                color: primaryColor,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Flexible(
                   child: Text(
-                'Company Details',
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 18,
-                ),
-              )),
-            ),
-            Divider(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.badge,
-                  color: primaryColor,
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Text(userModel.company!.name.toString())
-              ],
-            ),
-          ],
-        ),
+                '${userModel.address!.geo.lat} , ${userModel.address!.geo.lat}',
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ))
+            ],
+          ),
+          const Padding(
+            padding: EdgeInsets.only(top: 8.0),
+            child: Center(
+                child: Text(
+              'Company Details',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 18,
+              ),
+            )),
+          ),
+          const Divider(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.badge,
+                color: primaryColor,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Text(userModel.company!.name.toString())
+            ],
+          ),
+        ],
       ),
     );
   }
